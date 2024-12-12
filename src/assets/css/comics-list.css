@@ -1,0 +1,80 @@
+.comics-list-title {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.4rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.btn-add-comic {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-add-comic:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}
+
+.table-comics {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.table-comics th {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.table-comics td,
+.table-comics th {
+  padding: 15px;
+}
+
+.table-comics tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.btn-comic-edit,
+.btn-comic-delete {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-comic-edit {
+  background-color: #28a745;
+  color: #fff;
+  margin-right: 8px;
+}
+
+.btn-comic-edit:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.btn-comic-delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-comic-delete:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}

@@ -1,0 +1,71 @@
+/* Tiêu đề của trang xóa người dùng */
+.delete-user-container {
+    background: url('../images/vintage-background.jpg');
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Giảm độ đổ bóng */ 
+    padding: 20px; /* Khoảng cách bên trong */
+    margin: 20px auto; /* Căn giữa và giảm khoảng cách bên ngoài */
+    border: 1px solid #ddd;
+    max-width: 500px; /* Giảm chiều rộng tối đa của khung */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center; /* Căn giữa nội dung */
+}
+
+/* Tiêu đề của trang xóa người dùng */
+.delete-user-title {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2rem; /* Kích thước tiêu đề */
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Khung thông tin người dùng */
+.delete-user-info {
+    padding: 15px; /* Khoảng cách bên trong */
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiệu ứng khi hover */
+.delete-user-container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #ccc;
+}
+
+/* Định dạng thông tin người dùng */
+.delete-user-info p {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1rem; /* Kích thước font */
+    color: #555;
+    margin-bottom: 10px; /* Khoảng cách giữa các đoạn văn */
+}
+
+.delete-user-info strong {
+    color: black;
+}
+
+/* Nút xóa người dùng */
+.delete-user-container .btn {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px; /* Điều chỉnh kích thước nút */
+    font-size: 0.9rem; /* Giảm kích thước chữ */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 20px auto; /* Đặt nút vào giữa khung */
+}
+
+/* Hiệu ứng khi hover trên nút */
+.delete-user-container .btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

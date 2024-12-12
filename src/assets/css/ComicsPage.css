@@ -1,0 +1,644 @@
+/* Tổng quan về giao diện */
+.comic-background {
+    background-image: url('http://localhost:5000/uploads/coverImage-1725937249919-224283260.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ảnh nền cố định và không cuộn */
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Header của truyện */
+.comic-header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.comic-cover {
+    width: 200px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.comic-details {
+    flex: 1;
+}
+
+.comic-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.comic-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.comic-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Thông tin tác giả, thể loại và trạng thái */
+.comic-author-genre {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.comic-author-genre span {
+    display: block; 
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.comic-author-genre span:hover {
+    background-color: #e0e0e0;
+}
+
+/* Mô tả truyện */
+.comic-description {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.8;
+    border-left: 4px solid #0066cc;
+    padding-left: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Nút bấm */
+.btn-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-read-now {
+    background-color: #ff6600;
+    color: white;
+}
+
+.btn-like {
+    background-color: #e74c3c; /* Màu nền mặc định */
+    color: white; /* Màu chữ mặc định */
+    border: none; /* Loại bỏ viền */
+    padding: 10px 20px; /* Kích thước nút */
+    border-radius: 5px; /* Bo góc nút */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển màu và phóng to */
+}
+
+.btn-like:hover {
+    background-color: #c0392b; /* Màu nền khi hover */
+    color: #ffeb3b; /* Màu chữ khi hover */
+    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.6); /* Đổ bóng nổi bật khi hover */
+}
+
+/* Trạng thái đã bấm thích */
+.btn-liked {
+    background-color: #2ecc71; /* Màu nền xanh lá để hiển thị đã thích */
+    color: white; /* Màu chữ trắng */
+    transform: scale(1); /* Giữ kích thước gốc */
+    box-shadow: none; /* Không đổ bóng sau khi đã bấm thích */
+}
+
+.btn-liked:hover {
+    background-color: #27ae60; /* Màu xanh lá đậm hơn khi hover trong trạng thái đã thích */
+    color: #ffffff; /* Màu chữ trắng khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ */
+}
+
+.rating-section {
+    margin-top: 20px;
+    font-family: Arial, sans-serif; /* Thêm font cho phần đánh giá */
+}
+
+.star {
+    color: #ccc; /* Màu xám cho sao chưa được chọn */
+    margin-right: 5px;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s; /* Hiệu ứng chuyển động */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #f39c12; /* Màu vàng cho tất cả các sao trước và tại vị trí hover */
+}
+
+.star:hover ~ .star {
+    color: #ccc; /* Đổi màu trở lại thành xám cho các sao sau khi hover */
+}
+
+/* Khi hover vào một sao, tất cả các sao trước đó cũng sẽ được làm nổi bật */
+.stars:hover .star {
+    color: #f39c12; /* Tất cả các sao từ đầu đến vị trí hiện tại sẽ được chuyển màu */
+}
+
+.stars:hover .star:hover ~ .star {
+    color: #ccc; /* Khi lùi lại, các sao sau sao hover sẽ chuyển lại thành màu xám */
+}
+
+.star.filled {
+    color: #f39c12; /* Màu vàng cho sao đã được chọn */
+}
+
+/* Thêm một chút khoảng cách và kích thước cho tiêu đề */
+.rating-section h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Cải thiện khoảng cách cho phần đánh giá */
+.rating-section p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.btn-chapters, .btn-comments {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-show-more {
+    background-color: transparent;
+    border: none;
+    color: #0066cc;
+    font-size: 1rem;
+}
+
+.bookmark-text {
+    color: gold; /* Màu vàng cho chữ */
+    font-size: 1rem; /* Kích thước chữ nhỏ hơn */
+    font-weight: bold; /* Đậm chữ */
+    transition: color 0.2s ease, text-shadow 0.2s ease; /* Hiệu ứng chuyển đổi */
+    cursor: pointer; /* Con trỏ tay khi hover */
+    margin-left: 900px; /* Khoảng cách giữa "Chương {index + 1}" và "Đọc tiếp" */
+}
+
+.bookmark-text:hover {
+    color: orange; /* Đổi màu khi hover */
+    text-shadow: 0 0 5px gold; /* Tạo hiệu ứng bóng cho chữ khi hover */
+}
+
+/* Danh sách chương và bình luận */
+.chapter-list {
+    background-attachment: fixed;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    align-items: center; /* Căn giữa các mục chương theo chiều ngang */
+}
+
+/* Mục chương */
+.chapter-item {
+    padding: 15px; /* Tăng khoảng cách bên trong */
+    border-radius: 8px; /* Tăng độ tròn cho các góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng mờ */
+    text-align: left; /* Căn trái */
+    color: #0066cc; /* Màu chữ cho các chương được phép */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Hiệu ứng chuyển tiếp mượt mà */
+    margin-bottom: 10px; /* Khoảng cách giữa các mục chương */
+    background-color: #f9f9f9; /* Màu nền nhẹ */
+    cursor: pointer; /* Con trỏ là tay khi hover */
+    width: 100%; /* Đảm bảo các mục chương có cùng chiều rộng */
+}
+
+/* Hiệu ứng hover cho mục chương */
+.chapter-item:hover {
+    transform: translateY(-5px); /* Nâng lên khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Tăng độ bóng khi hover */
+    background-color: #e6f7ff; /* Màu nền thay đổi khi hover */
+}
+
+/* Đường dẫn cho chương */
+.chapter-item a {
+    text-decoration: none; /* Không gạch dưới */
+    color: inherit; /* Sử dụng màu chữ của phần tử cha */
+}
+
+/* Các chương không cho phép */
+.chapter-item.restricted {
+    color: grey; /* Màu chữ nhạt hơn cho chương không cho phép */
+    cursor: not-allowed; /* Biểu tượng con trỏ không cho phép */
+    opacity: 0.6; /* Giảm độ mờ cho chương không cho phép */
+}
+
+/* Thông báo không đủ quyền truy cập */
+.chapter-item.restricted span {
+    text-decoration: none; /* Không gạch dưới cho thông báo không đủ quyền */
+}
+
+.restricted {
+    opacity: 0.5; /* Giảm độ sáng cho các chương không đủ quyền truy cập */
+    pointer-events: none; /* Không cho phép click vào các chương này */
+}
+
+.last-read {
+    background-color: #e7f3ff; /* Màu nền cho chương đã đọc */
+    border-left: 5px solid #007bff; /* Đường viền bên trái cho chương đã đọc */
+    font-weight: bold; /* In đậm cho chương đã đọc */
+    color: #007bff; /* Màu sắc cho chương đã đọc */
+}
+
+
+.chapter-item i {
+    margin-right: 10px; /* Khoảng cách giữa biểu tượng và text */
+}
+
+/* Thông báo cho chương không đủ quyền */
+.restricted-message {
+    font-size: 12px; /* Kích thước chữ nhỏ hơn */
+    color: red; /* Màu đỏ cho thông báo */
+    margin-top: 5px; /* Khoảng cách giữa chương và thông báo */
+}
+
+/* Phần bình luận */
+.comment-section {
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+/* Form bình luận */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment-form .textarea-container {
+    display: flex;
+    gap: 10px;
+}
+
+.comment-form textarea {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    resize: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    border-color: #3498db; /* Đổi màu viền khi focus */
+    outline: none;
+}
+
+.send-icon {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-icon:hover {
+    background-color: #2980b9;
+}
+
+/* Danh sách bình luận */
+.comment-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px; /* Thêm khoảng cách hai bên để căn chỉnh */
+    max-width: 100%; /* Giới hạn chiều rộng tối đa */
+    background-color: #f9f9f9 !important; /* Màu nền nhẹ nhàng hơn cho toàn danh sách */
+    border-radius: 10px; /* Bo góc cho toàn danh sách để thêm mềm mại */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important; /* Tạo bóng nhẹ cho danh sách */
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi trạng thái */
+}
+
+/* Hiệu ứng hover cho toàn danh sách */
+.comment-list:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Tăng độ sâu bóng khi hover */
+    transform: translateY(-3px); /* Nhẹ nhàng nâng danh sách khi hover */
+}
+
+/* Mục bình luận */
+.comment-item {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px; /* Viền tròn mềm mại hơn */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Tăng nhẹ độ sâu của bóng */
+    border-left: 5px solid #3498db; /* Đường viền nổi bật với màu sắc chủ đạo */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà khi hover */
+    position: relative;
+}
+
+/* Thêm hiệu ứng khi người dùng hover vào bình luận */
+.comment-item:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Bóng sâu hơn khi hover */
+    transform: translateY(-5px); /* Di chuyển nhẹ lên trên khi hover */
+}
+
+/* Hiệu ứng thêm nhẹ cho đường viền khi hover */
+.comment-item:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(180deg, #3498db, #2ecc71) !important; /* Hiệu ứng gradient mượt */
+    transition: background 0.3s ease;
+}
+
+/* Căn chỉnh tên người dùng và nội dung bình luận trên cùng một hàng */
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa tên người dùng và nội dung */
+    font-size: 1rem; /* Kích thước chữ chung */
+    color: #2c3e50;
+}
+
+/* Phong cách cho tên người dùng */
+.comment-user {
+    font-weight: 600; /* Chữ đậm để nổi bật */
+    color: #3498db; /* Màu xanh để thu hút sự chú ý */
+    margin: 0;
+    font-size: 1.1rem; /* Tăng kích thước chữ một chút để dễ đọc hơn */
+    letter-spacing: 0.5px; /* Giãn khoảng cách giữa các ký tự cho hiện đại */
+    transition: color 0.3s ease; /* Hiệu ứng mượt khi thay đổi màu sắc */
+}
+
+.comment-user:hover {
+    color: #2980b9; /* Đổi màu khi hover để tạo điểm nhấn */
+}
+
+.comment-content {
+    color: #555; /* Màu tối nhẹ cho nội dung */
+    margin: 0;
+    flex: 1; /* Để nội dung linh hoạt chiếm phần còn lại của hàng */
+    word-wrap: break-word; /* Tự động xuống dòng nếu nội dung quá dài */
+    line-height: 1.4; /* Tăng khoảng cách dòng một chút để dễ đọc hơn */
+    font-size: 1rem; /* Kích thước chữ vừa phải */
+    position: relative;
+    top: -1px; /* Dịch nội dung lên trên một chút nhưng tinh tế hơn */
+    padding-left: 10px; /* Thêm khoảng cách để cách xa tên người dùng */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi thay đổi */
+}
+
+.comment-content:hover {
+    color: #333; /* Màu đậm hơn khi người dùng di chuột qua */
+}
+
+/* Các hành động của bình luận */
+.comment-actions {
+    font-family: 'Arial', sans-serif; /* Font chữ vui nhộn */
+    padding-top: 10px; /* Khoảng cách trên */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng nhẹ hơn cho chiều sâu */
+    display: flex; /* Hiển thị dạng flexbox */
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.comment-actions button {
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    background-color: #3498db; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Không có viền */
+    padding: 8px 12px; /* Khoảng cách bên trong */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Hiệu ứng khi hover */
+    font-size: 0.9rem; /* Kích thước chữ nhỏ hơn một chút */
+    letter-spacing: 0.5px; /* Giãn khoảng cách chữ */
+}
+
+.comment-actions button:hover {
+    background-color: #2980b9; /* Đổi màu khi hover */
+    transform: translateY(-3px); /* Tạo hiệu ứng nâng nút lên khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng khi hover */
+}
+
+.comment-actions button:focus {
+    outline: none; /* Bỏ outline mặc định khi nút được chọn */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Thêm bóng nhẹ khi nút được chọn */
+}
+
+/* Form phản hồi */
+.reply-form {
+    margin-top: 15px; /* Khoảng cách trên */
+    padding: 15px; /* Khoảng cách bên trong */
+    border-radius: 12px; /* Tăng border-radius để tạo hình tròn mềm mại hơn */
+    border: 1px solid #e0e0e0; /* Thêm border để làm rõ hơn */
+    background-color: #f9f9f9; /* Màu nền nhẹ cho form */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ tạo chiều sâu */
+    display: flex; /* Hiển thị dạng flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa textarea và icon */
+}
+
+.reply-form textarea {
+    flex: 1; /* Để textarea linh hoạt chiếm phần còn lại */
+    padding: 10px; /* Khoảng cách bên trong của textarea */
+    border: 1px solid #ccc; /* Viền cho textarea */
+    border-radius: 8px; /* Bo góc cho textarea */
+    font-size: 0.9rem; /* Kích thước chữ cho textarea */
+    resize: none; /* Không cho phép thay đổi kích thước */
+    outline: none; /* Bỏ outline mặc định khi textarea được chọn */
+    transition: border-color 0.3s ease; /* Hiệu ứng khi thay đổi màu viền */
+}
+
+.reply-form textarea:focus {
+    border-color: #3498db; /* Đổi màu viền khi textarea được chọn */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Thêm bóng khi textarea được chọn */
+}
+
+.reply-form .send-icon {
+    background-color: #3498db; /* Màu nền cho icon gửi */
+    color: white; /* Màu chữ cho icon */
+    border: none; /* Không có viền */
+    border-radius: 50%; /* Bo tròn icon thành hình tròn */
+    padding: 10px; /* Khoảng cách bên trong */
+    cursor: pointer; /* Đổi con trỏ khi hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng khi hover */
+}
+
+.reply-form .send-icon:hover {
+    background-color: #2980b9; /* Đổi màu khi hover */
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+}
+
+/* Khu vực textarea */
+.reply-form textarea {
+    flex: 1; /* Làm cho textarea chiếm hết không gian còn lại */
+    height: 80px; /* Tăng chiều cao của textarea */
+    padding: 12px;
+    border-radius: 8px; /* Tăng border-radius để tạo hình tròn mềm mại */
+    resize: none;
+    font-family:  'Arial', sans-serif; /* Thay đổi font cho phù hợp */
+    font-size: 1rem;
+    line-height: 1.5; /* Cải thiện độ rõ ràng của văn bản */
+    color: #000; /* Màu chữ đen cho textarea */
+}
+
+/* Icon gửi */
+.reply-send-icon {
+    background: transparent; /* Loại bỏ màu nền */
+    border: none; /* Loại bỏ viền của icon */
+    color: black; /* Màu của icon, có thể thay đổi theo ý muốn */
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.5rem; /* Kích thước lớn hơn cho icon */
+    transition: color 0.3s ease, transform 0.2s ease; /* Thêm hiệu ứng transform và thay đổi màu chữ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reply-send-icon:hover {
+    color: #0056b3; /* Thay đổi màu chữ khi hover */
+    transform: scale(1.05); /* Tăng kích thước của icon khi hover */
+}
+
+.replies {
+    margin-left: 20px; /* Lùi vào bên trái */
+    border-left: 2px solid #3498db; /* Đường viền bên trái */
+    padding-left: 10px; /* Khoảng cách giữa đường viền và nội dung */
+    margin-top: 10px; /* Khoảng cách trên */
+}
+
+.reply {
+    margin-bottom: 10px; /* Khoảng cách giữa các phản hồi */
+    background-color: #f9f9f9; /* Màu nền nhẹ */
+    padding: 10px; /* Khoảng cách bên trong */
+    border-radius: 6px; /* Bo góc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+    display: flex; /* Sử dụng flex để sắp xếp nội dung */
+    align-items: center; /* Căn giữa nội dung */
+    gap: 10px; /* Khoảng cách giữa các thành phần */
+}
+
+.reply-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa tên người dùng và nội dung */
+    font-size: 1rem; /* Kích thước chữ chung */
+    color: #2c3e50;
+    flex-grow: 1; /* Cho phép phần này mở rộng để chiếm không gian */
+}
+
+.reply-author {
+    font-weight: bold; /* Đậm để nổi bật */
+    color: #3498db; /* Màu xanh để thu hút sự chú ý */
+    margin-right: 5px; /* Khoảng cách giữa tên người dùng và nội dung */
+}
+
+.reply-content {
+    color: #555; /* Màu tối nhẹ cho nội dung */
+    margin-right: 10px; /* Khoảng cách giữa nội dung và nút xóa */
+    word-wrap: break-word; /* Tự động xuống dòng nếu quá dài */
+    flex-grow: 1; /* Cho phép nội dung mở rộng để chiếm không gian */
+}
+
+.btn-delete-reply {
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    background-color: #3498db; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo góc */
+    padding: 8px 12px; /* Khoảng cách bên trong */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Hiệu ứng khi hover */
+    font-size: 0.9rem; /* Kích thước chữ nhỏ hơn một chút */
+    letter-spacing: 0.5px; /* Giãn khoảng cách chữ */
+}
+
+.btn-delete-reply:hover {
+    background-color: #2980b9; /* Đổi màu khi hover */
+    transform: translateY(-3px); /* Tạo hiệu ứng nâng nút lên khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng khi hover */
+}
+
+.btn-delete-reply:focus {
+    outline: none; /* Bỏ outline mặc định khi nút được chọn */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Thêm bóng nhẹ khi nút được chọn */
+}
+
+.modal {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.download-icon {
+    font-size: 18px; /* Kích thước biểu tượng */
+    color: #007bff; /* Màu sắc của nút tải xuống */
+    cursor: pointer; /* Hiệu ứng khi hover */
+    transition: color 0.3s ease;
+    margin-left: 20px; /* Khoảng cách giữa biểu tượng và text */
+}
+
+.download-icon:hover {
+    color: #0056b3; /* Đổi màu khi hover */
+}
+
+.restricted .download-icon {
+    opacity: 0.5; /* Làm mờ biểu tượng khi chương bị giới hạn quyền truy cập */
+    cursor: not-allowed; /* Con trỏ chuột thể hiện không thể nhấn */
+}
