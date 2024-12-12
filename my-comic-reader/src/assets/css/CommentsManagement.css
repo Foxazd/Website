@@ -1,0 +1,170 @@
+/* CommentsManagement.css */
+
+/* Bảng bình luận */
+.table-comments {
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng */
+    table-layout: auto; /* Cho phép cột tự động điều chỉnh chiều rộng theo nội dung */
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+    margin-top: -20px; /* Xích bảng lên một chút, điều chỉnh giá trị này theo nhu cầu */
+}
+
+/* Điều chỉnh các cột trong bảng */
+.table-comments th,
+.table-comments td {
+    word-wrap: break-word; /* Đảm bảo nội dung không tràn ra ngoài */
+    padding: 12px; /* Thêm padding cho các ô */
+}
+
+/* Tiêu đề bảng */
+thead.table-dark {
+    background-color: #343a40; /* Màu nền tối cho tiêu đề */
+    color: white; /* Màu chữ trắng */
+}
+
+/* Điều chỉnh màu chữ và nền cho các tiêu đề cột trong bảng */
+.table-hover th {
+    color: #fff; /* Màu chữ trắng */
+    background-color: #007bff; /* Màu nền xanh */
+}
+
+/* Hiệu ứng hover cho hàng trong bảng */
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1; /* Màu nền khi hover */
+}
+
+/* Tùy chỉnh cho hành động bình luận */
+.comment-actions {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa; /* Màu nền sáng hơn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333; /* Màu chữ đen */
+    width: 100%; /* Đặt chiều rộng là 100% */
+}
+
+/* Định dạng textarea */
+.comment-actions textarea {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 12px;
+    min-height: 120px;
+    resize: vertical;
+    width: 100%;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Màu nền trắng cho textarea */
+    color: #000; /* Màu chữ đen cho textarea */
+}
+
+/* Nút chính */
+.comment-actions button {
+    border: none; /* Bỏ viền */
+    border-radius: 4px; /* Bo góc */
+    padding: 10px 20px; /* Kích thước nút */
+    font-size: 1rem; /* Kích thước chữ */
+    color: #fff; /* Màu chữ trắng */
+    background-color: #007bff; /* Màu nền xanh */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Hiệu ứng chuyển động */
+}
+
+/* Hiệu ứng hover cho nút */
+.comment-actions button:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+    transform: translateY(-2px); /* Nâng nút lên một chút */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+}
+
+/* Các nút khác */
+.btn-success {
+    background-color: #28a745; /* Màu nền xanh lá */
+    border-color: #28a745; /* Màu viền xanh lá */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Màu nền khi hover */
+    border-color: #1e7e34; /* Màu viền khi hover */
+    transform: translateY(-2px); /* Nâng nút lên một chút */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Màu nền vàng */
+    border-color: #ffc107; /* Màu viền vàng */
+    color: #000; /* Màu chữ đen */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Màu nền khi hover */
+    border-color: #d39e00; /* Màu viền khi hover */
+    transform: translateY(-2px); /* Nâng nút lên một chút */
+}
+
+.btn-add-comment {
+    background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient màu nền */
+    border: none; /* Bỏ viền */
+    color: #fff; /* Màu chữ trắng */
+    padding: 10px 20px; /* Kích thước nút */
+    border-radius: 4px; /* Bo góc nút */
+    font-size: 1rem; /* Kích thước chữ */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển động */
+}
+
+.btn-add-comment:hover {
+    background: linear-gradient(90deg, #0056b3, #003f7f); /* Gradient màu nền khi hover */
+    transform: translateY(-2px); /* Nâng nút lên một chút */
+}
+
+.modal-delete .modal-dialog {
+    max-width: 600px; /* Tăng chiều rộng của khung */
+    width: 500px; /* Đảm bảo responsive */
+}
+
+.modal-delete {
+    border-radius: 8px; /* Bo góc cho modal */
+    margin-top: 250px !important; /* Xích modal xuống một chút */
+}
+
+.modal-edit .modal-dialog {
+    max-width: 600px; /* Tăng chiều rộng của khung */
+    width: 90%; /* Đảm bảo responsive */
+}
+
+/* Định dạng modal chỉnh sửa bình luận */
+.modal-edit {
+    border-radius: 8px; /* Bo góc cho modal */
+    margin-top: 250px !important; /* Xích modal xuống một chút */
+    position: relative; /* Đảm bảo modal là khung tham chiếu cho các phần tử con */
+}
+
+.modal-edit .modal-header .btn-close {
+    top: 10px; /* Khoảng cách từ cạnh trên của modal */
+    right: 10px; /* Đẩy nút sát cạnh phải của modal */
+}
+
+
+.modal-title {
+    margin-top: 100px; /* Tạo khoảng cách phía trên tiêu đề */
+    text-align: center; /* Căn giữa tiêu đề nếu cần */
+}
+
+.modal-header {
+    padding-top: 20px; /* Tạo thêm khoảng cách trong phần header */
+}
+
+/* Định dạng cho textarea trong modal */
+.modal-body textarea {
+    border-radius: 6px; /* Bo góc cho textarea */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Đổ bóng cho textarea */
+    resize: vertical; /* Cho phép thay đổi kích thước theo chiều dọc */
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .comment-actions {
+        margin-top: 20px;
+    }
+
+    .table-comments {
+        width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    }
+}

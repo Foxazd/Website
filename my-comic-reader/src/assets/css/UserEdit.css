@@ -1,0 +1,70 @@
+.user-edit-container {
+    background: url('../images/vintage-background.jpg');
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); 
+  }
+  
+  .user-edit-container h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .user-edit-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .user-edit-form label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .user-edit-form input {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .user-edit-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .user-edit-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .user-edit-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .user-edit-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+  }
+
+  .chart-title {
+    margin-top: 15px; /* Thêm khoảng cách giữa biểu đồ và tiêu đề */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center; /* Căn giữa tiêu đề */
+  }

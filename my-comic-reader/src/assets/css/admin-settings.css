@@ -1,0 +1,124 @@
+/* admin-settings.css */
+.settings-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: url('../images/vintage-background.jpg');
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  /* Tùy chỉnh thêm cho các phần tử bên trong */
+  .settings-container h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Trường nhập liệu */
+  .form-group {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-weight: 500;
+    color: #fff; /* Đổi màu chữ để dễ đọc trên nền hình ảnh */
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+  
+  /* Nút lưu cài đặt */
+  button.button-primary {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #ffcc00;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button.button-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+  }
+  
+  button.button-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 204, 0, 0.5); 
+  }
+  
+  /* Thông báo lỗi và thành công */
+  .alert {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    .button-primary {
+      font-size: 0.875rem;
+    }
+  }
+  
+  .settings-icon {
+    margin-right: 0.5rem;
+    color: #ffcc00; /* Màu của biểu tượng */
+    font-size: 1.5rem; /* Kích thước của biểu tượng */
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .back-button:hover {
+    text-decoration: none;
+  }

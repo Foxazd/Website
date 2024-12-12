@@ -1,0 +1,67 @@
+/* Danh sách tin nhắn */
+.list-group {
+  list-style-type: none; /* Bỏ đánh dấu mặc định */
+  padding: 0; /* Bỏ khoảng cách mặc định */
+}
+
+/* Mỗi mục trong danh sách tin nhắn */
+.list-group-item {
+  display: flex; /* Sử dụng Flexbox để căn chỉnh các thành phần */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  background-color: #f0f8ff; /* Màu nền sáng nhẹ */
+  border: 2px solid #007bff; /* Đường viền màu xanh dương */
+  border-radius: 15px; /* Bo góc nhiều hơn */
+  margin-bottom: 15px; /* Khoảng cách giữa các mục */
+  padding: 15px; /* Khoảng cách bên trong */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động */
+}
+
+/* Định dạng hình ảnh bìa truyện */
+.list-group-item img {
+  display: block; /* Hiển thị hình ảnh như khối */
+  margin-right: 15px; /* Khoảng cách bên phải của hình ảnh */
+  max-width: 80px; /* Chiều rộng tối đa của hình ảnh */
+  height: auto; /* Đảm bảo tỉ lệ hình ảnh không bị biến dạng */
+  border-radius: 10px; /* Bo góc cho hình ảnh */
+  transition: transform 0.3s; /* Hiệu ứng chuyển động cho hình ảnh */
+}
+
+/* Hiệu ứng khi hover lên hình ảnh */
+.list-group-item img:hover {
+  transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+}
+
+/* Định dạng văn bản thông báo */
+.list-group-item h5 {
+  color: #333; /* Màu chữ tối */
+  font-family: 'Arial', sans-serif; /* Font chữ dễ đọc */
+  margin: 0; /* Bỏ margin cho tiêu đề */
+  flex: 1; /* Chiếm không gian còn lại */
+  font-size: 1.2rem; /* Kích thước chữ lớn hơn */
+}
+
+/* Định dạng nội dung tin nhắn */
+.list-group-item p {
+  color: #555; /* Màu chữ nhẹ nhàng hơn */
+  font-family: 'Arial', sans-serif; /* Font chữ dễ đọc */
+  margin: 0; /* Bỏ margin */
+  font-size: 1rem; /* Kích thước chữ */
+}
+
+/* Hiệu ứng khi hover lên mỗi mục */
+.list-group-item:hover {
+  transform: scale(1.02); /* Tăng nhẹ kích thước */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng đậm hơn */
+  background-color: #e6f7ff; /* Đổi màu nền khi hover */
+}
+
+/* Định dạng thông báo lỗi */
+.error-message {
+  color: red; /* Màu chữ đỏ */
+  font-weight: bold; /* In đậm */
+  text-align: center; /* Căn giữa */
+  font-size: 1.1rem; /* Kích thước chữ lớn hơn */
+  margin-top: 20px; /* Khoảng cách trên */
+}
+

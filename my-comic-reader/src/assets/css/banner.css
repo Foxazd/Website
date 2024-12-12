@@ -1,0 +1,94 @@
+.banner-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cấu hình cho slider item */
+.slider-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Định dạng hình ảnh bên trong banner */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+/* Hiển thị thông tin truyện */
+.comic-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng mờ */
+    padding: 10px 20px;
+    color: black;
+    border-radius: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    text-align: center; /* Canh giữa nội dung */
+    opacity: 0; /* Ẩn thông tin mặc định */
+    transition: opacity 0.3s ease; /* Thay đổi độ mờ */
+}
+
+/* Hiển thị thông tin khi hover */
+.image-container:hover .comic-info {
+    opacity: 1; /* Hiện thông tin khi hover */
+}
+
+.comic-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comic-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Cấu hình cho các nút điều hướng của slider */
+.slick-next, .slick-prev {
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size: 24px;
+    color: white;
+}
+
+/* Hiệu ứng animation khi chuyển giữa các banner */
+.slick-slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slick-active {
+    opacity: 1;
+}

@@ -1,0 +1,64 @@
+.admin-header {
+  background-color: #333 !important;
+  color: #fff !important;
+  padding: 15px 30px !important;
+  border-bottom: 4px solid #3498db !important;
+}
+
+.header-logo img {
+  max-height: 50px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center;
+  font-size: 16px !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.nav-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+button.nav-link {
+  background: none;
+  border: none;
+  color: #fff !important;
+  cursor: pointer !important;
+  font-size: 16px;
+  padding: 10px 20px !important;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* Thay đổi màu chữ khi rê chuột vào */
+.nav-link:hover {
+  color: #007bff !important; /* Màu chữ khi hover */
+}
+
+.nav-link:hover .nav-icon {
+  color: #007bff !important; /* Màu icon khi hover */
+}

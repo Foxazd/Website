@@ -1,0 +1,163 @@
+/* Tiêu đề danh sách người dùng */
+.users-list-title {
+    font-family: 'Poppins', sans-serif; /* Font hiện đại */
+    font-size: 2.2rem; /* Giảm nhẹ kích thước */
+    color: #333; /* Màu chữ tối để tạo cảm giác chuyên nghiệp */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600; /* Đậm vừa phải */
+    letter-spacing: 0.05em; /* Khoảng cách giữa các ký tự tạo sự thoáng đãng */
+    text-transform: uppercase; /* Chuyển chữ thành in hoa */
+    position: relative;
+}
+
+.users-list-title::after {
+    content: '';
+    display: block;
+    width: 60px; /* Đường kẻ dưới tiêu đề */
+    height: 4px;
+    background-color: #3498db; /* Màu xanh hiện đại */
+    margin: 0.5rem auto 0; /* Canh giữa và cách tiêu đề một chút */
+    border-radius: 2px; /* Bo góc nhẹ */
+}
+
+/* Nút thêm người dùng mới */
+.btn-add-user {
+    font-family: 'Poppins', sans-serif; /* Font chữ hiện đại */
+    background-color: #3498db; /* Màu xanh hiện đại */
+    color: white; /* Màu chữ trắng */
+    border: none;
+    border-radius: 4px; /* Bo góc nhẹ hơn */
+    padding: 12px 24px;
+    font-size: 1rem; /* Kích thước vừa phải */
+    font-weight: 500; /* Đậm vừa */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng mờ tạo hiệu ứng nổi */
+}
+
+.btn-add-user:hover {
+    background-color: #2980b9; /* Màu xanh đậm hơn khi hover */
+    transform: translateY(-2px); /* Nâng nhẹ nút khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Tăng bóng mờ khi hover */
+}
+
+.table-users {
+    font-family: 'Poppins', sans-serif; /* Font chữ hiện đại */
+    background-color: #ffffff; /* Màu nền trắng sáng */
+    border-radius: 8px; /* Bo góc nhẹ hơn */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Bóng mờ sâu hơn một chút */
+    overflow: hidden;
+    margin-top: 20px;
+    border-collapse: collapse; /* Loại bỏ khoảng trống giữa các ô */
+}
+
+.table-users th {
+    padding: 12px 16px; /* Khoảng cách vừa phải trong các ô */
+    text-align: left; /* Căn trái nội dung */
+    font-size: 1rem; /* Kích thước font nhỉnh hơn để nổi bật */
+    color: #555; /* Màu chữ nhạt hơn để phân biệt */
+    background-color: #f5f5f5; /* Màu nền nhẹ tạo sự phân biệt với nội dung */
+    font-weight: 600; /* Tăng độ đậm để thu hút sự chú ý */
+    text-transform: uppercase; /* Chữ in hoa để tiêu đề trông chuyên nghiệp */
+    letter-spacing: 0.05em; /* Khoảng cách giữa các ký tự giúp dễ đọc hơn */
+    border-bottom: 2px solid #ddd; /* Đường kẻ dưới phân cách với nội dung */
+}
+
+.table-users td {
+    padding: 12px 16px; /* Khoảng cách vừa phải trong các ô */
+    text-align: left; /* Căn trái nội dung */
+    font-size: 0.95rem; /* Kích thước font vừa phải */
+    color: #333; /* Màu chữ dễ đọc */
+    background-color: #fff; /* Màu nền trắng sạch sẽ */
+    border-bottom: 1px solid #eee; /* Đường kẻ nhẹ giữa các hàng */
+    transition: background-color 0.3s ease; /* Hiệu ứng khi di chuột qua */
+}
+
+.table-users td:hover {
+    background-color: #f0f8ff; /* Thay đổi màu nền khi hover để tương tác tốt hơn */
+}
+
+.table-users thead {
+    background-color: #f7f7f7; /* Màu nền nhẹ cho tiêu đề */
+    font-weight: 600; /* In đậm tiêu đề */
+    text-transform: uppercase; /* Viết hoa tiêu đề */
+}
+
+.table-users tbody tr {
+    border-bottom: 1px solid #eaeaea; /* Đường viền giữa các hàng */
+    transition: background-color 0.2s ease; /* Hiệu ứng chuyển màu */
+}
+
+.table-users tbody tr:hover {
+    background-color: #f0f8ff; /* Hiệu ứng màu nhạt khi hover */
+}
+
+.table-users tbody tr:nth-child(even) {
+    background-color: #fafafa; /* Màu nền xen kẽ cho các hàng */
+}
+
+.table-users tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Định dạng các nút hành động */
+.table-users .action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.btn-user-edit, .btn-user-delete, .btn-user-view {
+    border: none;
+    border-radius: 8px; /* Bo góc mềm mại hơn */
+    padding: 8px 16px; /* Tăng padding để tạo cảm giác cân đối hơn */
+    font-size: 0.95rem; /* Kích thước font chữ vừa phải */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Bóng nhẹ để tạo hiệu ứng nổi */
+}
+
+.btn-user-edit {
+    background-color: #4CAF50; /* Màu xanh tươi mới */
+    color: #fff;
+}
+
+.btn-user-edit:hover {
+    background-color: #45A049; /* Màu xanh đậm hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nổi lên nhẹ khi hover */
+}
+
+.btn-user-delete {
+    background-color: #F44336; /* Màu đỏ nổi bật */
+    color: #fff;
+}
+
+.btn-user-delete:hover {
+    background-color: #D32F2F; /* Màu đỏ đậm hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nổi lên nhẹ khi hover */
+}
+
+.btn-user-view {
+    background-color: #2196F3; /* Màu xanh da trời dịu nhẹ */
+    color: #fff;
+    margin-left: auto; /* Canh phải */
+    margin-right: 0;
+}
+
+.btn-user-view:hover {
+    background-color: #1976D2; /* Màu xanh đậm hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nổi lên nhẹ khi hover */
+}
+
+
+/* Định dạng văn bản ở giữa */
+.table-users .text-center {
+    font-family: 'Inter', sans-serif; /* Sử dụng font chữ hiện đại và rõ ràng */
+    font-size: 16px; /* Giảm kích thước font một chút để tinh tế hơn */
+    font-weight: 500; /* Độ đậm vừa phải để tạo điểm nhấn */
+    color: #6c757d; /* Màu xám trung tính và nhẹ nhàng */
+    text-align: center; /* Đảm bảo văn bản luôn được căn giữa */
+    padding: 12px 0; /* Thêm khoảng trống phía trên và dưới để cân đối */
+    letter-spacing: 0.5px; /* Tăng khoảng cách giữa các chữ để dễ đọc hơn */
+}

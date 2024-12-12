@@ -1,0 +1,95 @@
+/* Header */
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f6f9; /* Màu nền nhẹ */
+  }
+  
+  .about-header {
+    background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  }
+  
+  /* Nội dung trang About */
+  .about-content {
+    flex: 1;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* Tạo hiệu ứng đổ bóng mềm mại */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động */
+  }
+  
+  .about-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Các phần trong nội dung */
+  .about-section, .about-team, .about-contact {
+    margin-bottom: 40px;
+  }
+  
+  .about-section h1, .about-team h2, .about-contact h2 {
+    font-size: 2.2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .about-section h1::after, .about-team h2::after, .about-contact h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    display: block;
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+  
+  /* Đoạn văn */
+  .about-section p, .about-team p, .about-contact p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+  
+  .about-contact a {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Thêm hiệu ứng chuyển động */
+  }
+  
+  .about-contact a:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
+
+  /* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .about-content {
+      padding: 20px;
+    }
+  
+    .about-section h1, .about-team h2, .about-contact h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-section p, .about-team p, .about-contact p {
+      font-size: 1rem;
+    }
+  }
